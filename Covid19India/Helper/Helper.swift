@@ -9,7 +9,10 @@
 import Foundation
 
 class Parser  {
-    static func GET<T : Decodable>(urlString : String, completionHandler: @escaping (_ timeseries  : T?, Error?) -> Void)   {
+    static func GET<T : Decodable>(showLoader : Bool = true, urlString : String, completionHandler: @escaping (_ timeseries  : T?, Error?) -> Void)   {
+            if showLoader   {
+                Loader.show()
+            }
             let urlRequest = URLRequest(url: URL(string : urlString)!)
             URLSession.shared.dataTask(with: urlRequest) { (data : Data?, response : URLResponse?, error :  Error?) in
                 if error != nil {
@@ -23,7 +26,8 @@ class Parser  {
                         catch let e {
                             completionHandler(nil,e)
                         }
-                    }
+                }
+                Loader.hide()
                 }.resume()
             }
 }
@@ -77,8 +81,7 @@ struct StateCode {
     "AR":"Arunachal Pradesh",
     "AS":"Assam",
     "BR":"Bihar",
-    "CG":"Chandigarh",
-    "CH":"Chhattisgarh",
+    "CH":"Chandigarh",
     "DN":"Dadra and Nagar Haveli",
     "DD":"Daman and Diu",
     "DL":"Delhi",
@@ -107,8 +110,11 @@ struct StateCode {
     "TS":"Telangana",
     "TR":"Tripura",
     "UP":"Uttar Pradesh",
-    "UK":"Uttarakhand",
-    "WB":"West Bengal"
+    "UT":"Uttarakhand",
+    "WB":"West Bengal",
+    "CT":"Chhattisgarh",
+    "TG":"Telangana",
+    "TT":"Total"
 }
 """
     

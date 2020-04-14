@@ -32,7 +32,7 @@ class StatesViewController: UITableViewController  {
                 print(error?.localizedDescription ?? "STATE ERROR")
             }
             else    {
-                self.states = states ?? []
+                self.states = (states ?? []).sorted(by: {($0.totalConfrimedDelta) > ($1.totalConfrimedDelta) })
             }
         }
     }
@@ -122,13 +122,13 @@ class StateView: UIView {
     
     let deltaLabel : UILabel = {
         let label = UILabel(text: nil, font: UIFont.boldSystemFont(ofSize: fontSize), textColor: .red, textAlignment: .center, numberOfLines: 0)
-        label.withWidth(60)
+        label.withWidth(70)
         return label
     }()
     
     let confirmedLabel : UILabel = {
         let label = UILabel(text: nil, font: UIFont.boldSystemFont(ofSize: fontSize), textColor: .gray, textAlignment: .right, numberOfLines: 0)
-        label.withWidth(60)
+        label.withWidth(70)
         return label
     }()
     
@@ -179,13 +179,13 @@ class StateDistrictView: UIView {
     
     let deltaLabel : UILabel = {
         let label = UILabel(text: nil, font: UIFont.boldSystemFont(ofSize: fontSize), textColor: .red, textAlignment: .center, numberOfLines: 0)
-        label.withWidth(60)
+        label.withWidth(70)
         return label
     }()
     
     let confirmedLabel : UILabel = {
         let label = UILabel(text: nil, font: UIFont.boldSystemFont(ofSize: fontSize), textColor: .gray, textAlignment: .right, numberOfLines: 0)
-        label.withWidth(60)
+        label.withWidth(70)
         return label
     }()
     
@@ -216,13 +216,13 @@ class StateTableHeaderView: UIView {
     
     let deltaLabel : UILabel = {
         let label = UILabel(text: "Today", font: UIFont.boldSystemFont(ofSize: fontSize), textColor: .red, textAlignment: .center, numberOfLines: 0)
-        label.withWidth(60)
+        label.withWidth(70)
         return label
     }()
     
     let confirmedLabel : UILabel = {
         let label = UILabel(text: "Total", font: UIFont.boldSystemFont(ofSize: fontSize), textColor: .gray, textAlignment: .right, numberOfLines: 0)
-        label.withWidth(60)
+        label.withWidth(70)
         return label
     }()
     

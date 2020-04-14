@@ -80,7 +80,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     }()
 
     var statesPickerValues : [String]   {
-        return Array(self.statesData.keys)
+        return Array(self.statesData.keys).sorted(by:<)    
     }
     
     override func viewDidLoad() {
@@ -492,6 +492,9 @@ extension ViewController : UIPickerViewDataSource, UIPickerViewDelegate {
         return self.statesPickerValues.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (StateCode.Dictionary[self.statesPickerValues[row]]) ?? "" == "" {
+            print(self.statesPickerValues[row])
+        }
         return (StateCode.Dictionary[self.statesPickerValues[row]])
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

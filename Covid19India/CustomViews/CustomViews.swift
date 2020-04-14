@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HappeningUIShadowRadiusView: SpringView {
+class HappeningUIShadowRadiusView: UIView {
     
     @IBInspectable var shadowRadius : CGFloat = 4 {
         didSet  {
@@ -36,8 +36,8 @@ class HappeningUIShadowRadiusView: SpringView {
         }
     }
 
-    let radiusView : SpringView = {
-        let view = SpringView()
+    @IBInspectable let radiusView : UIView = {
+        let view = UIView()
         return view
     }()
     
@@ -65,11 +65,19 @@ class HappeningUIShadowRadiusView: SpringView {
         self.updateRadius()
     }
     
+    override func didAddSubview(_ subview: UIView) {
+        super.didAddSubview(subview)
+    }
+    
     func updateRadius()  {
         self.radiusView.setCornerRadius(radius: self.cornerRadius)
     }
     func updateShadow()  {
         self.setupSketchShadow(opacity: self.shadowOpacity, blur: self.shadowRadius, x: self.offset.width, y: self.offset.height, color: self.shadowColor, spread: 0)
+        if self.backgroundColor != .clear   {
+            self.radiusView.backgroundColor = self.backgroundColor
+            self.backgroundColor = .clear
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -80,25 +88,25 @@ class HappeningUIShadowRadiusView: SpringView {
 
 class HappeningUINeumorphicShadowRadiusView: UIView {
   
-    var themeColour : UIColor = Colors.white {
+    @IBInspectable var themeColour : UIColor = Colors.white {
         didSet  {
             self.updateShadows()
         }
     }
     
-    var lightShadowColour : UIColor = .white {
+    @IBInspectable var lightShadowColour : UIColor = .white {
         didSet  {
             self.updateShadows()
         }
     }
     
-    var darkShadowColour : UIColor = Colors.darkShadowColor {
+    @IBInspectable var darkShadowColour : UIColor = Colors.darkShadowColor {
         didSet  {
             self.updateShadows()
         }
     }
 
-    var cornerRadius : CGFloat = 10 {
+    @IBInspectable var cornerRadius : CGFloat = 10 {
         didSet  {
             self.updateShadows()
         }
@@ -179,5 +187,5 @@ extension CALayer {
 
 public struct Colors {
     public static let white : UIColor = UIColor(red: 248.00 / 255.00, green: 248.00 / 255.00, blue: 248.00 / 255.00, alpha: 1.0)
-    public static let darkShadowColor : UIColor = UIColor(hex: "242F46")
+    public static let darkShadowColor : UIColor = UIColor(red: 36.00 / 255.00, green: 47.00 / 255.00, blue: 70.00 / 255.00, alpha: 1.0)
 }
