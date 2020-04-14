@@ -87,7 +87,6 @@
 		DECBD4AB24448B110021D9D2 /* Platform+Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD41424448B110021D9D2 /* Platform+Graphics.swift */; };
 		DECBD4AC24448B110021D9D2 /* Platform+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD41524448B110021D9D2 /* Platform+Accessibility.swift */; };
 		DECBD4AD24448B110021D9D2 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD41624448B110021D9D2 /* Platform.swift */; };
-		DECBD4AE24448B110021D9D2 /* ChartColorTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD41724448B110021D9D2 /* ChartColorTemplates.swift */; };
 		DECBD4AF24448B110021D9D2 /* TransformerHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD41824448B110021D9D2 /* TransformerHorizontalBarChart.swift */; };
 		DECBD4B024448B110021D9D2 /* Platform+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD41924448B110021D9D2 /* Platform+Color.swift */; };
 		DECBD4B124448B110021D9D2 /* ChartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD41A24448B110021D9D2 /* ChartUtils.swift */; };
@@ -266,7 +265,6 @@
 		DECBD41424448B110021D9D2 /* Platform+Graphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Platform+Graphics.swift"; sourceTree = "<group>"; };
 		DECBD41524448B110021D9D2 /* Platform+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Platform+Accessibility.swift"; sourceTree = "<group>"; };
 		DECBD41624448B110021D9D2 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
-		DECBD41724448B110021D9D2 /* ChartColorTemplates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColorTemplates.swift; sourceTree = "<group>"; };
 		DECBD41824448B110021D9D2 /* TransformerHorizontalBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformerHorizontalBarChart.swift; sourceTree = "<group>"; };
 		DECBD41924448B110021D9D2 /* Platform+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Platform+Color.swift"; sourceTree = "<group>"; };
 		DECBD41A24448B110021D9D2 /* ChartUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartUtils.swift; sourceTree = "<group>"; };
@@ -551,7 +549,6 @@
 				DECBD41424448B110021D9D2 /* Platform+Graphics.swift */,
 				DECBD41524448B110021D9D2 /* Platform+Accessibility.swift */,
 				DECBD41624448B110021D9D2 /* Platform.swift */,
-				DECBD41724448B110021D9D2 /* ChartColorTemplates.swift */,
 				DECBD41824448B110021D9D2 /* TransformerHorizontalBarChart.swift */,
 				DECBD41924448B110021D9D2 /* Platform+Color.swift */,
 				DECBD41A24448B110021D9D2 /* ChartUtils.swift */,
@@ -984,7 +981,6 @@
 				DECBD4D824448B110021D9D2 /* ScatterChartData.swift in Sources */,
 				DE4C5F4624460AEE009C1AB4 /* AnchoredConstraints.swift in Sources */,
 				DECBD4A424448B110021D9D2 /* IFillFormatter.swift in Sources */,
-				DECBD4AE24448B110021D9D2 /* ChartColorTemplates.swift in Sources */,
 				DECBD4EF24448B110021D9D2 /* CombinedChartDataProvider.swift in Sources */,
 				DECBD4C824448B110021D9D2 /* BarLineScatterCandleBubbleChartDataSet.swift in Sources */,
 				DECBD4B024448B110021D9D2 /* Platform+Color.swift in Sources */,
