@@ -380,7 +380,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="126.5625"/>
+            <point key="canvasLocation" x="2868.115942028986" y="126.5625"/>
+        </scene>
+        <!--World Timeseries-->
+        <scene sceneID="pas-cq-vaT">
+            <objects>
+                <viewController id="85b-m6-0In" customClass="WorldViewController" customModule="Covid19India" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TQT-2q-p5S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGr-qc-mvA">
+                                <rect key="frame" x="20" y="190" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Em6-hc-zLe">
+                                <rect key="frame" x="20" y="254" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Confirmed"/>
+                                    <segment title="Active"/>
+                                    <segment title="Deceased"/>
+                                    <segment title="Recovered"/>
+                                </segments>
+                                <connections>
+                                    <action selector="chartTypeValueChanged:" destination="85b-m6-0In" eventType="valueChanged" id="lGd-7J-JRp"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2KV-c1-l6L" customClass="LineChartView" customModule="Covid19India" customModuleProvider="target">
+                                <rect key="frame" x="20" y="315" width="374" height="468"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aly-LK-znX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="World Timeseries" id="mby-Dh-hZY"/>
+                    <connections>
+                        <outlet property="chartView" destination="2KV-c1-l6L" id="0xW-Ju-885"/>
+                        <outlet property="countryTextField" destination="HGr-qc-mvA" id="fKR-b7-elg"/>
+                        <outlet property="segmentedControl" destination="Em6-hc-zLe" id="3TJ-gg-lby"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgM-Wd-KLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620.28985507246387" y="-497.54464285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="N8K-GP-LTa">
@@ -395,11 +444,12 @@
                     <connections>
                         <segue destination="NKa-rQ-SJH" kind="relationship" relationship="viewControllers" id="Eqs-oy-2oE"/>
                         <segue destination="DZi-oD-zFc" kind="relationship" relationship="viewControllers" id="yGE-oW-Vyd"/>
+                        <segue destination="2Lv-ft-poF" kind="relationship" relationship="viewControllers" id="xnK-Vy-mVf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTg-Ih-iDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378" y="-21"/>
+            <point key="canvasLocation" x="1286.9565217391305" y="-21.428571428571427"/>
         </scene>
         <!--Home-->
         <scene sceneID="D4K-Y3-mY3">
@@ -418,7 +468,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WI-v7-tHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="126.5625"/>
         </scene>
         <!--States And District-->
         <scene sceneID="tRx-KB-O1I">
@@ -458,8 +508,28 @@
             </objects>
             <point key="canvasLocation" x="160.86956521739131" y="771.42857142857144"/>
         </scene>
+        <!--World-->
+        <scene sceneID="237-cd-1NT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Lv-ft-poF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="World" image="globe" catalog="system" id="T8B-SO-sKZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GKx-bd-Yfm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="85b-m6-0In" kind="relationship" relationship="rootViewController" id="WA2-UP-nw9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIv-fo-Rg1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289.85507246376812" y="-497.54464285714283"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="globe" catalog="system" width="64" height="60"/>
         <image name="home" width="25" height="25"/>
         <image name="map.fill" catalog="system" width="64" height="56"/>
     </resources>

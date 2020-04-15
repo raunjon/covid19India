@@ -155,6 +155,8 @@
 		DECBD4F124448B110021D9D2 /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD46124448B110021D9D2 /* BarLineScatterCandleBubbleChartDataProvider.swift */; };
 		DECBD4F224448B110021D9D2 /* ScatterChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD46224448B110021D9D2 /* ScatterChartDataProvider.swift */; };
 		DECBD4F324448B110021D9D2 /* BubbleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBD46324448B110021D9D2 /* BubbleChartDataProvider.swift */; };
+		DED8D27624473C8400D2FCF1 /* WorlTimeSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8D27524473C8400D2FCF1 /* WorlTimeSeries.swift */; };
+		DED8D27824473DFA00D2FCF1 /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8D27724473DFA00D2FCF1 /* WorldViewController.swift */; };
 		DEDC13372437881400EC7951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDC13362437881400EC7951 /* AppDelegate.swift */; };
 		DEDC13392437881400EC7951 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDC13382437881400EC7951 /* SceneDelegate.swift */; };
 		DEDC133B2437881400EC7951 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDC133A2437881400EC7951 /* ViewController.swift */; };
@@ -333,6 +335,8 @@
 		DECBD46124448B110021D9D2 /* BarLineScatterCandleBubbleChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarLineScatterCandleBubbleChartDataProvider.swift; sourceTree = "<group>"; };
 		DECBD46224448B110021D9D2 /* ScatterChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterChartDataProvider.swift; sourceTree = "<group>"; };
 		DECBD46324448B110021D9D2 /* BubbleChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartDataProvider.swift; sourceTree = "<group>"; };
+		DED8D27524473C8400D2FCF1 /* WorlTimeSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorlTimeSeries.swift; sourceTree = "<group>"; };
+		DED8D27724473DFA00D2FCF1 /* WorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
 		DEDC13332437881400EC7951 /* Covid19India.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19India.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDC13362437881400EC7951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEDC13382437881400EC7951 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -393,6 +397,7 @@
 			children = (
 				DEDC133A2437881400EC7951 /* ViewController.swift */,
 				DEDC139024378F8100EC7951 /* StatesViewController.swift */,
+				DED8D27724473DFA00D2FCF1 /* WorldViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -734,6 +739,7 @@
 			children = (
 				DEDC13672437882D00EC7951 /* Response.swift */,
 				DECBD3C22444827A0021D9D2 /* States.swift */,
+				DED8D27524473C8400D2FCF1 /* WorlTimeSeries.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -894,6 +900,7 @@
 				DECBD4A724448B110021D9D2 /* Transformer.swift in Sources */,
 				DECBD4BE24448B110021D9D2 /* AnimatedZoomViewJob.swift in Sources */,
 				DECBD47824448B110021D9D2 /* IShapeRenderer.swift in Sources */,
+				DED8D27624473C8400D2FCF1 /* WorlTimeSeries.swift in Sources */,
 				DECBD4C924448B110021D9D2 /* PieChartDataEntry.swift in Sources */,
 				DECBD4E324448B110021D9D2 /* ILineChartDataSet.swift in Sources */,
 				DECBD4D424448B110021D9D2 /* PieChartDataSet.swift in Sources */,
@@ -1001,6 +1008,7 @@
 				DECBD49124448B110021D9D2 /* CandleStickChartView.swift in Sources */,
 				DECBD4BF24448B110021D9D2 /* ViewPortJob.swift in Sources */,
 				DECBD4CD24448B110021D9D2 /* RadarChartData.swift in Sources */,
+				DED8D27824473DFA00D2FCF1 /* WorldViewController.swift in Sources */,
 				DECBD4EA24448B110021D9D2 /* IBubbleChartDataSet.swift in Sources */,
 				DECBD48924448B110021D9D2 /* PieRadarHighlighter.swift in Sources */,
 				DECBD4A124448B110021D9D2 /* DefaultValueFormatter.swift in Sources */,
