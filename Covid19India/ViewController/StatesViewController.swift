@@ -63,7 +63,7 @@ class StatesViewController: UITableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
+        return 70
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -136,6 +136,7 @@ class StateView: UIView {
         self.init(frame : .zero)
         self.addSubviews(self.titleLabel,self.deltaLabel, self.confirmedLabel)
         self.titleLabel.padStartAndCenterY(withPadding: 10)
+        self.deltaLabel.padLeftAndCenterY(withPadding: 0, leadingAnchor: self.titleLabel.trailingAnchor)
         self.confirmedLabel.padLeftAndCenterY(withPadding: 0, leadingAnchor: self.deltaLabel.trailingAnchor)
         self.confirmedLabel.padEndAndCenterY(withPadding: 10)
         self.deltaLabel.padRightAndCenterY(withPadding: 10, trailingAnchor: self.confirmedLabel.leadingAnchor)
@@ -159,6 +160,11 @@ class StateDistritCell: UITableViewCell {
     
     convenience init()  {
         self.init(style : .default, reuseIdentifier : StateDistritCell.cellId)
+        self.setupViews()
+    }
+    
+    func setupViews()  {
+        self.selectionStyle = .none
         self.addSubview(districtView)
         self.districtView.fillSuperview()
     }

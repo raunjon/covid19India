@@ -98,7 +98,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     
     func setupScrollView()  {
         self.scrollView.frame.size = CGSize(width: Constants.width, height: Constants.height)
-        self.scrollView.contentSize = CGSize(width: Constants.width, height: Constants.height*2)
+        self.scrollView.contentSize = CGSize(width: Constants.width, height: Constants.height*2.5)
     }
     
     @objc func didSelectState()  {
@@ -248,7 +248,7 @@ class ViewController: UIViewController, ChartViewDelegate {
             recoveredChartEntries.append(chartEntry)
         }
         let chartEntries = [confirmedChartEntries,activeChartEntries,deceasedChartEntries,recoveredChartEntries]
-        let colors : [UIColor] = [.blue,.yellow,.red,.green]
+        let colors : [UIColor] = [.blue,.systemYellow,.red,.green]
         let dataSets = ["Confirmed", "Active", "Deceased", "Recovered"]
         var lineChartDataSet : [LineChartDataSet] = []
         var i = 0
@@ -344,7 +344,7 @@ class ViewController: UIViewController, ChartViewDelegate {
             recoveredChartEntries.append(chartEntry)
         }
         let chartEntries = [confirmedChartEntries,activeChartEntries,deceasedChartEntries,recoveredChartEntries]
-        let colors : [UIColor] = [.blue,.yellow,.red,.green]
+        let colors : [UIColor] = [.blue,.systemYellow,.red,.green]
         let dataSets = ["Confirmed", "Active", "Deceased", "Recovered"]
         var lineChartDataSet : [LineChartDataSet] = []
         var i = 0
